@@ -8,8 +8,11 @@ logs/
 *.png
 *.tif
 *.tiff
-
+!samples/*.pdf
+!samples/*.jpg
 __pycache__/
 *.pyc
 .venv/
 .env
+
+.idea/
