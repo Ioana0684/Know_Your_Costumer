@@ -1,0 +1,4 @@
+﻿opencv-python
+pdfminer.six
+pytesseract
+dateparser
