@@ -1,0 +1,15 @@
+﻿data/
+!data/.gitkeep
+
+logs/
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+
+__pycache__/
+*.pyc
+.venv/
+.env
