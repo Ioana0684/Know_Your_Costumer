@@ -1,14 +1,29 @@
-# Know your Customer (KYC) - OCR CI + Factura (Python + OpenCv + Tesseract)
+# Know Your Customer (KYC) – OCR-based Document Verification
 
-Proiect demo care:
+This project is a simple KYC (Know Your Customer) pipeline that extracts and validates information from identity documents and invoices using OCR and rule-based checks.
 
--citeste o poza de carte de Identitate (CI) si o factura PDF,
-- face OCR pe CI, extrage campuri din PDF nativ (fara OCR),
-- ruleaza validari KYC (CNP, expirare CI, vechime factura, total),
-- emite un verdict KYC_VALID/ KYC_INVALID (cu motive),
-- scrie un log simplu in logs/kyc_log.jsonl
+## 🔍 What the project does
+- Reads an image of an identity card and a PDF invoice
+- Uses OCR (Tesseract + OpenCV) to extract text from ID documents
+- Extracts structured fields from native PDF invoices (without OCR)
+- Performs KYC validation checks:
+  - Personal identification number (CNP)
+  - ID expiration date
+  - Invoice age and total amount
+- Outputs a final decision: `KYC_VALID` or `KYC_INVALID`, with reasons
+- Writes a simple JSON log of each verification
 
-> In acest MVP, facturile PDF cu text nativ se parseaza direct (fara OCR).Pentru PDF-uri scanate se poate adauga pdfimage + OCR.
- ---
+## 🧠 Why this matters
+Automated KYC pipelines are widely used in fintech and compliance systems to reduce manual verification effort and detect invalid or expired documents early in the process.
 
-##Structura proiectului 
+This project focuses on the **document processing and validation logic**, rather than deep learning models.
+
+## 🛠️ Technologies used
+- Python
+- OpenCV
+- Tesseract OCR
+- PDF text parsing
+- Basic image preprocessing
+- Rule-based validation logic
+
+## 📂 Project structure
